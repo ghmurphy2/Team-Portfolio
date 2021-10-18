@@ -1,0 +1,19 @@
+{
+  "name": "team-portfolio",
+  "version": "1.0.0",
+  "description": "populates info cards based on employee info",
+  "main": "logic.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ghmurphy2/Team-Portfolio.git"
+  },
+  "author": "Gavin Murphy",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ghmurphy2/Team-Portfolio/issues"
+  },
+  "homepage": "https://github.com/ghmurphy2/Team-Portfolio#readme"
+}
