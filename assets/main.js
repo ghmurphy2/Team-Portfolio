@@ -12,21 +12,21 @@ class Team {
     if (managerObject instanceof Manager){
       (this.manager) = managerObject;
     } else {
-      throw new Error('Please make sure it\'s an instance of the Manager class!')
+      throw new Error('Please enter all information for this employee!')
     }
   }
   addEngineer = function(engineer){
     if (engineer instanceof Engineer){
       (this.engineers).push(engineer)
     } else {
-      throw new Error('Please make sure it\'s an instance of the Engineer class!')
+      throw new Error('Please enter all information for this employee!')
     }
   }
   addIntern = function(intern){
     if (intern instanceof Intern){
       (this.interns).push(intern)
     } else {
-      throw new Error('Please make sure it\'s an instance of the Intern class!')
+      throw new Error('Please enter all information for this employee!')
     }
 
   }

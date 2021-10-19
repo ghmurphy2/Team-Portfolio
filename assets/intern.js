@@ -1,7 +1,7 @@
 class Intern {
     constructor(name, id, email, github){
       if (!name || !id || !email || !github){
-        throw new Error('Please enter all information for this Engineer!')
+        throw new Error('Please enter all information for this employee!')
       } else {
         this.name = name;
         this.id = id;

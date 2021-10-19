@@ -58,3 +58,21 @@ function createDocument(man, cards){
   </html>
   `
 }
+
+function html(data){
+  const parsed = JSON.parse(data);
+  const manager = parsed.manager;
+  let promises = [];
+  if (parsed.interns.length !== 0 && parsed.engineer.length !== 0) {
+    promises.push(generateCards(parsed.engineer))
+    promises.push(generateCards(parsed.intern))
+  } else if (parsed.interns.length === 0) {
+    promises.push(generateCards(parsed.engineer))
+  } else {
+    promises.push(generateCards(parsed.intern))
+  }
+  Promise.all(promises)
+    .then(result => fs.writeFile('./dist/myTeam.html', createDocument(manager, result), err => err ? console.error(err): null));
+}
+
+module.exports = html;
