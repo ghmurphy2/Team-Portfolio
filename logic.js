@@ -4,11 +4,11 @@
 
 const fs = require('fs');
 const inquirer = require('inquirer');
-const generateHTML = require('./generateHTML')
-const Team = require('./team');
-const Engineer = require('./engineer');
+const html = require('./html')
+const Team = require('./assets/main');
+const Engineer = require('./assets/engineer');
 const Intern = require('./intern')
-const Manager = require('./manager')
+const Manager = require('./assets/manager')
 
 const mQuestions = [
   {
