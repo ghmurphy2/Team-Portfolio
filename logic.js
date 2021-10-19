@@ -2,44 +2,44 @@
 // create a card template for each of the worker type
 // place cards into template html with function
 
-const fs = require('fs');
-const inquirer = require('inquirer');
-const genHTML = require('./genHTML')
-const Team = require('./lib/team');
-const Engineer = require('./lib/engineer');
-const Intern = require('./lib/intern')
-const Manager = require('./lib/manager')
+// const fs = require('fs');
+// const inquirer = require('inquirer');
+// const generateHTML = require('./generateHTML')
+// const Team = require('./lib/team');
+// const Engineer = require('./lib/engineer');
+// const Intern = require('./lib/intern')
+// const Manager = require('./lib/manager')
 
-const managerQuestions = [
+// const mQuestions = [
   {
-    name: 'managerName',
+    name: 'mName',
     type: 'input',
     message: 'What is the manager\'s name?',
     required: 'true'
   },
   {
-    name: 'managerId',
+    name: 'mId',
     type: 'input',
     message: 'What is the manager\'s employee ID?',
     required: 'true'
   },
   {
-    name: 'managerEmail',
+    name: 'mEmail',
     type: 'input',
     message: 'What is the manager\'s email address?',
     required: 'true'
   },
   {
-    name: 'managerOffice',
+    name: 'mNumber',
     type: 'input',
     message: 'What is the manager\'s office number?',
     required: 'true'
   },
 ]
 
-const nextChoice = [
+const next = [
   {
-    name: 'nextChoice',
+    name: 'next',
     type: 'list',
     choices: ['Engineer', 'Intern', 'I\'m done!'],
     message: 'What type of employee do you want to add?',
@@ -47,7 +47,7 @@ const nextChoice = [
   }
 ]
 
-const engineerQuestions = [
+const eQ = [
   {
     name: 'name',
     type: 'input',
@@ -74,7 +74,7 @@ const engineerQuestions = [
   },
 ]
 
-const internQuestions = [
+const internQ = [
   {
     name: 'name',
     type: 'input',
@@ -101,13 +101,13 @@ const internQuestions = [
   },
 ]
 
-const myTeam = new Team()
+const Team = new Team()
 
-function genHTML(data){
-  genHTML(data);
+function HTML(data){
+  createHTML(data);
 }
 
-function otherPrompts(choice) {
+function employee(choice) {
   if (choice === 'Engineer') {
     inquirer.prompt(engineerQuestions)
       .then(result => {
@@ -134,7 +134,7 @@ const choices = _=> {
     .then(choice => otherPrompts(choice))
 };
 
-function init(){
+function post(){
   inquirer.prompt(managerQuestions)
   .then(response => {
     const newMan = new Manager(response.managerName, response.managerId, response.managerEmail, response.managerOffice)
@@ -144,4 +144,5 @@ function init(){
   .catch(err=> {throw new Error(err)})
 };
 
-init()
+post()
+
