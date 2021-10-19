@@ -2,15 +2,15 @@
 // create a card template for each of the worker type
 // place cards into template html with function
 
-// const fs = require('fs');
-// const inquirer = require('inquirer');
-// const generateHTML = require('./generateHTML')
-// const Team = require('./lib/team');
-// const Engineer = require('./lib/engineer');
-// const Intern = require('./lib/intern')
-// const Manager = require('./lib/manager')
+const fs = require('fs');
+const inquirer = require('inquirer');
+const generateHTML = require('./generateHTML')
+const Team = require('./team');
+const Engineer = require('./engineer');
+const Intern = require('./intern')
+const Manager = require('./manager')
 
-// const mQuestions = [
+const mQuestions = [
   {
     name: 'mName',
     type: 'input',
