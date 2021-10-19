@@ -7,7 +7,7 @@ class Manager {
         this.id = id;
         this.email = email;
         this.github = github;
-        this.role = 'Engineer'
+        this.role = 'Manager'
       }
     }
     role(){
