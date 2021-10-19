@@ -3,3 +3,41 @@ Card type easy temp
 lowc ontrast
 focus shift? */
 /* for sure centered, dont worry about stack */
+
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+  }
+  
+  body {
+    background: teal
+  }
+  
+  header {
+    width: 100vw;
+    height: 200px;
+    background: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .container {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5px;
+    flex-direction: row;
+  }
+  
+  .card {
+    flex: 0 0 300px;
+    flex-direction: column;
+    width: 25vw;
+    height: 40vh;
+    border: 1px solid black;
+    border-radius: 10px;
+    background: rgb(69, 72, 216);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
