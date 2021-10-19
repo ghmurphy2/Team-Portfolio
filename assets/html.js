@@ -20,7 +20,7 @@ const generateCards = (objArray)=>new Promise((resolve, reject)=>{
     }
   })
 
-function createDocument(man, cards){
+function createDocument(info, cards){
   let containers;
   if (cards.length === 1){
     containers = `<div class="container">
@@ -47,10 +47,10 @@ function createDocument(man, cards){
   <div class="container">
     <div class="card">
       <h2>Manager</h2>
-      <h1>${man.managerName}</h1>
-      <h3>Employee ID: ${man.managerId}</h3>
-      <p><a href="mailto:${man.managerEmail}" target="_blank">Email</a></p>
-      <p>Office #: ${man.managerOffice}</p>
+      <h1>${info.managerName}</h1>
+      <h3>Employee ID: ${info.managerId}</h3>
+      <p><a href="mailto:${info.managerEmail}" target="_blank">Email</a></p>
+      <p>Office #: ${info.managerOffice}</p>
     </div>
   </div>
   ${containers}

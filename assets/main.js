@@ -1,6 +1,6 @@
-const Engineer = require('./engineer');
-const Intern = require('./intern');
-const Manager = require('./manager');
+const Engineer = require('./assets/engineer');
+const Intern = require('./assets/intern');
+const Manager = require('./assets/manager');
 
 class Team {
   constructor(){
