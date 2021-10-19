@@ -1,6 +1,6 @@
 const fs = require('fs');
 
-const generateCards = (objArray)=>new Promise((resolve, reject)=>{
+const cards = (objArray)=>new Promise((resolve, reject)=>{
     if (objArray.length !== 0){
       let cardsArr = [];
       let engOrInt = objArray[0].school ? 'Intern' : 'Engineer'
@@ -64,15 +64,15 @@ function html(data){
   const manager = parsed.manager;
   let promises = [];
   if (parsed.interns.length !== 0 && parsed.engineer.length !== 0) {
-    promises.push(generateCards(parsed.engineer))
-    promises.push(generateCards(parsed.intern))
+    promises.push(cards(parsed.engineer))
+    promises.push(cards(parsed.intern))
   } else if (parsed.interns.length === 0) {
-    promises.push(generateCards(parsed.engineer))
+    promises.push(cards(parsed.engineer))
   } else {
-    promises.push(generateCards(parsed.intern))
+    promises.push(cards(parsed.intern))
   }
   Promise.all(promises)
-    .then(result => fs.writeFile('./dist/myTeam.html', createDocument(manager, result), err => err ? console.error(err): null));
+    .then(result => fs.writeFile('./team.html', createDocument(manager, result), err => err ? console.error(err): null));
 }
 
 module.exports = html;
